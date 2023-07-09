@@ -21,7 +21,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-public class TableroPosicion extends JFrame {
+public class TableroPosicion extends JFrame{
 
     public static final String rutaFile = "src/resources/tablero.png";
 
@@ -124,7 +124,6 @@ public class TableroPosicion extends JFrame {
         add(panelPlayer, BorderLayout.WEST);
         boardOpponent.setBoards(panelAux, panelAux2);
 
-
         // panelButton
 
         panelButton = new JPanel();
@@ -192,8 +191,7 @@ public class TableroPosicion extends JFrame {
                 }
             }
         }
-
-
+        
 
         public void mouseClicked(MouseEvent eventMouse) {
 
