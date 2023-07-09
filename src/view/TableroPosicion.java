@@ -1,3 +1,15 @@
+/*
+ *  Archivo: TableroPosición.java
+ *	Proyecto: MiniProyecto3
+ *	Autor(es): Kevin Andrés Girón Villegas (2180450) -- Sarahy Gisselle Caicedo Betancourth (2180695)
+ * -- Stiven Castro Sanchez(2177771) -- Miguel Angel Caicedo Mosquera (2177619)
+ *	Email(s): Kevin.giron@correounivalle.edu.co, sarahy.caicedo@correounivalle.edu.co,
+ * stiven.castro@correounivalle.edu.co, miguel.caicedo.mosquera@correounivalle.edu.co
+ *	Fecha creacion: 2023-07-01
+ *	Fecha ultima modificacion: 2023-07-05
+ *	Version: 1.0
+ */
+
 package view;
 
 import controller.Barco;
@@ -191,7 +203,7 @@ public class TableroPosicion extends JFrame{
                 }
             }
         }
-        
+
 
         public void mouseClicked(MouseEvent eventMouse) {
 
