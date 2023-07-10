@@ -11,6 +11,8 @@
  */
 package controller;
 
+import model.Tablero;
+
 import java.awt.GridLayout;
 import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
@@ -37,7 +39,6 @@ public class Barco extends JPanel {
 
 
     private int gridSize;
-
 
     private Tablero[][] aBoard;
 
