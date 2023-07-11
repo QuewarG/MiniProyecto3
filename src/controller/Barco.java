@@ -31,6 +31,10 @@ import javax.swing.JPanel;
 
 public class Barco extends JPanel {
 
+    /**
+     * Atributos de la clase
+     * */
+
     public static final String rutaFile = "src/resources/tablero.png";
 
     private int boxSize;
@@ -48,6 +52,10 @@ public class Barco extends JPanel {
 
     private MouseListener listener;
 
+
+    /**
+     * Metodo constructor que recibe parametros privados
+     * */
 
     public Barco(int boxSize, int maxShips, int gridSize, MouseListener listener) {
 
@@ -72,6 +80,10 @@ public class Barco extends JPanel {
         }
     }
 
+    /**
+     * Función que permiter iterar de acuerdo al tamaño del arreglo, validando el evento
+     * @param listener
+     */
     private void splitImage(MouseListener listener) {
         for(int row = 0; row < gridSize; row++) {
             for(int col = 0; col < gridSize; col++) {
@@ -90,6 +102,10 @@ public class Barco extends JPanel {
         }
     }
 
+    /**
+     * Función que permite asignar de manera aleatoria la posición del barco e itera de acuerdo a las casilla
+     * que va ocupar en el trablero
+     * */
     private void spawnShips() {
         Random random = new Random();
         int row, col, orientation;
@@ -330,6 +346,8 @@ public class Barco extends JPanel {
 
 
 
+
+
     public void hideShips() {
         for(int row = 1; row < gridSize; row++) {
             for(int col = 1; col < gridSize; col++) {
@@ -339,6 +357,13 @@ public class Barco extends JPanel {
         }
 
     }
+
+    /**
+     * Función que permite capturar el evento al momento de dar clic sobre el tablero
+     * @param aTablero
+     * @param mod
+     * @return
+     */
 
     public int clickedShoot(Tablero aTablero, int mod) {
         for(int row = 1; row < gridSize; row++) {
@@ -376,12 +401,21 @@ public class Barco extends JPanel {
         return false;
     }
 
+    /**
+     * Función que asigna los valores random a la maquina
+     * @return
+     */
+
     public Tablero randomBox() {
         Random random = new Random();
         int row = random.nextInt(gridSize -1) + 1;
         int col = random.nextInt(gridSize -1) + 1;
         return aBoard[row][col];
     }
+
+    /**
+     * Función que permite identificar los barcos que se han hundido
+     */
 
     public void killShips() {
         ImageIcon image = new ImageIcon("src/resources/explosion.png");
